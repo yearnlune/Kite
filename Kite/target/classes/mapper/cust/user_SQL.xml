@@ -2,9 +2,25 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-<mapper namespace="sample">
+<mapper namespace="UserDAO">
+     <!-- 회원 전체 검색 -->
+     <select id="selectUserList" resultType="UserVO">
+     <![CDATA[
+     	SELECT 	
+     			 PU.USR_NO	AS	userNo
+     			,PU.USR_ID	AS	userID
+     			,PU.USR_PW	AS	userPW
+     			,PU.USR_NIC	AS	userNicname
+     			,PU.USR_GDR AS	userGender
+     			,PU.USR_AGE AS	userAge
+     			,PU.USR_ARA	AS	userArea
+     			,PU.USR_DT	AS	userDate
+     			
+		FROM KITE_USER PU
+		ORDER BY PU.USR_DT
+     ]]>
      
-     
+     </select>
 </mapper>
 
 
