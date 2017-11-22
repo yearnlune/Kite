@@ -1,4 +1,5 @@
-package yeon.kite.vo;
+package yeon.kite.cust.vo;
+
 
 import java.io.Serializable;
 import java.util.Date;
@@ -28,19 +29,21 @@ public class UserVO implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	private int userNo;
+	private long userNo;
 	private String userID;
 	private String userPW;
 	private String userNicname;
-	private int userGender;
+	private String userGender;
 	private int userAge;
 	private String userArea;
 	private Date userDate;
 	
-	public int getUserNo() {
+	public UserVO() {};
+	
+	public long getUserNo() {
 		return userNo;
 	}
-	public void setUserNo(int userNo) {
+	public void setUserNo(long userNo) {
 		this.userNo = userNo;
 	}
 	public String getUserID() {
@@ -61,10 +64,10 @@ public class UserVO implements Serializable{
 	public void setUserNicname(String userNicname) {
 		this.userNicname = userNicname;
 	}
-	public int getUserGender() {
+	public String getUserGender() {
 		return userGender;
 	}
-	public void setUserGender(int userGender) {
+	public void setUserGender(String userGender) {
 		this.userGender = userGender;
 	}
 	public int getUserAge() {
